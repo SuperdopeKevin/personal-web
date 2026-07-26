@@ -3,11 +3,9 @@ import { Canvas } from "@react-three/fiber";
 import { useMediaQuery } from "react-responsive";
 
 import HeroLights from "./HeroLights";
-import { Avatar } from "../../Avatar";
-import { Suspense } from "react";
+import Particles from "./Particles";
 
-const HeroExperience = ({ onAboutClick, scrollProgress }) => {
-  const isMobile = useMediaQuery({ query: "(max-width: 768px)" });
+const HeroExperience = ({ onAboutClick }) => {
   const isTablet = useMediaQuery({ query: "(max-width: 1024px)" });
 
   return (
@@ -22,16 +20,8 @@ const HeroExperience = ({ onAboutClick, scrollProgress }) => {
         maxPolarAngle={Math.PI / 2}
       />
 
-      <Suspense fallback={null}>
-        <HeroLights />
-        <Avatar
-          onAboutClick={onAboutClick}
-          scrollProgress={scrollProgress}
-          scale={isMobile ? 1.5 : 2.5}
-          position={[0, -1, 0]}
-          rotation={[0, 0, 0]}
-        />
-      </Suspense>
+      <HeroLights />
+      <Particles count={300} />
     </Canvas>
   );
 };

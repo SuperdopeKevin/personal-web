@@ -12,7 +12,6 @@ import AboutMeModal from "../components/AboutMeModal";
 
 const Hero = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
-  const [scrollProgress, setScrollProgress] = useState(0);
 
   useGSAP(() => {
     gsap.fromTo(
@@ -21,23 +20,6 @@ const Hero = () => {
       { y: 0, opacity: 1, stagger: 0.2, duration: 1, ease: "power2.inOut" }
     );
   });
-
-  // Track scroll progress for avatar animation trigger
-  useEffect(() => {
-    const handleScroll = () => {
-      const heroSection = document.getElementById("hero");
-      if (!heroSection) return;
-      const rect = heroSection.getBoundingClientRect();
-      const heroHeight = heroSection.offsetHeight;
-      // progress: 0 when hero fully visible, 1 when hero is scrolled past
-      const scrolled = Math.max(0, -rect.top);
-      const progress = Math.min(1, scrolled / heroHeight);
-      setScrollProgress(progress);
-    };
-
-    window.addEventListener("scroll", handleScroll, { passive: true });
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
 
   const openAbout = useCallback(() => setIsModalOpen(true), []);
   const closeAbout = useCallback(() => setIsModalOpen(false), []);
@@ -95,10 +77,7 @@ const Hero = () => {
         {/* RIGHT: 3D Model or Visual */}
         <figure>
           <div className="hero-3d-layout">
-            <HeroExperience
-              onAboutClick={openAbout}
-              scrollProgress={scrollProgress}
-            />
+            <HeroExperience onAboutClick={openAbout} />
           </div>
         </figure>
       </div>
