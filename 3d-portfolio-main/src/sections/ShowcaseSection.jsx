@@ -58,10 +58,17 @@ const AppShowcase = () => {
                 Agentic GFlowNet for Gene Subset Discovery
               </h2>
               <p className="text-white-50 md:text-xl">
-                An end-to-end ML pipeline combining GFlowNet (diverse subset
-                sampling), LLM-guided planning, and R/limma statistical
-                evaluation for biomarker discovery. Modular architecture with
-                pluggable LLM backend and subprocess-bridged R integration.
+                Designed and implemented an end-to-end Agentic GFlowNet
+                pipeline for diverse gene subset discovery, combining
+                reinforcement learning (GFlowNet) with LLM-guided planning
+                for biomarker identification. The pipeline features a modular
+                Python package with a Manager (LLM planning), GFlowNet
+                sampler (diverse candidate generation), R/limma backend
+                (statistical evaluation via subprocess bridge), and a Critic
+                (feedback loop). This architecture enables diverse, high-quality
+                gene subsets to be discovered from high-dimensional genomic
+                data, with reward curves and diversity metrics validating
+                each run.
               </p>
               <div className="flex flex-wrap gap-2 mt-4">
                 {["Python", "GFlowNet", "PyTorch", "R/limma", "LLM Agents"].map((tag) => (
@@ -81,10 +88,19 @@ const AppShowcase = () => {
                   alt="AstraZeneca GWAS Pipeline"
                 />
               </div>
-              <h2>AstraZeneca — TCGA GWAS Pipeline for CIN</h2>
+              <h2>CIN Driver Gene Discovery — AstraZeneca</h2>
               <p className="text-white-50 text-sm mt-2">
-                Multi-omics GWAS: MLM/FarmCPU, BayesC, & eRD-GWAS across 926
-                BRCA patients. TP53 validated as #1 hit.
+                Chromosomal instability (CIN) is a hallmark of aggressive
+                cancers, driving tumor heterogeneity, drug resistance, and
+                poor patient outcomes. Identifying the genetic drivers of CIN
+                is critical for developing targeted therapies. At AstraZeneca,
+                I built a comprehensive GWAS pipeline integrating TCGA
+                multi-omics data (somatic mutations, germline genotypes,
+                gene expression, copy-number) across 926 BRCA patients.
+                Three independent statistical engines — MLM/FarmCPU (GAPIT),
+                Bayesian BayesC (BGLR), and eRD-GWAS/TWAS — were applied to
+                regress CIN phenotypes, with TP53 emerging as the #1 hit
+                (P=8.2×10⁻⁴⁵) across all methods.
               </p>
             </div>
 
@@ -92,10 +108,19 @@ const AppShowcase = () => {
               <div className="image-wrapper bg-[#FFE7EB]">
                 <img src={assetPath("images/project3.png")} alt="Wildfire Risk Forecasting" />
               </div>
-              <h2>Spatio-Temporal Wildfire Risk Forecasting</h2>
+              <h2>GFlowNet for Diverse Subset Discovery</h2>
               <p className="text-white-50 text-sm mt-2">
-                Nonlinear dimension reduction + XGBoost, ESN, LSTM for
-                long-lead fire weather prediction.
+                Generative Flow Networks (GFlowNets) learn to sample diverse,
+                high-reward candidates from combinatorial spaces — ideal for
+                gene subset discovery where both quality and diversity matter.
+                I developed a modular Python package implementing an Agentic
+                GFlowNet architecture: an LLM-based Manager decomposes the
+                discovery goal into sub-tasks, the GFlowNet sampler proposes
+                diverse gene subsets, an R/limma backend evaluates statistical
+                significance, and a Critic provides feedback to guide the
+                search. This closed-loop system achieves superior diversity
+                metrics compared to greedy selection, enabling reproducible
+                biomarker discovery for precision medicine.
               </p>
             </div>
           </div>
