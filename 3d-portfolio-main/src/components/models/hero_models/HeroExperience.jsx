@@ -12,12 +12,14 @@ const RhetoricianModel = ({ isMobile }) => {
   return <primitive object={scene} scale={isMobile ? 0.8 : 1.2} position={[0, -3.5, 0]} />;
 };
 
-const HeroExperience = ({ onAboutClick }) => {
+const HeroExperience = ({ onAboutClick, compact }) => {
   const isMobile = useMediaQuery({ query: "(max-width: 768px)" });
   const isTablet = useMediaQuery({ query: "(max-width: 1024px)" });
 
+  const canvasHeight = compact ? '200px' : (isMobile ? '50vh' : '80vh');
+
   return (
-    <Canvas camera={{ position: [0, 1, 8], fov: 45 }} style={{ height: isMobile ? '50vh' : '80vh' }}>
+    <Canvas camera={{ position: [0, 1, 8], fov: 45 }} style={{ height: canvasHeight, width: compact ? '200px' : '100%' }}>
       <ambientLight intensity={0.5} color="#ffffff" />
       <OrbitControls
         enablePan={false}
@@ -32,7 +34,7 @@ const HeroExperience = ({ onAboutClick }) => {
       <Particles count={200} />
 
       <Suspense fallback={null}>
-        <RhetoricianModel isMobile={isMobile} />
+        <RhetoricianModel isMobile={isMobile || compact} />
       </Suspense>
     </Canvas>
   );

@@ -1,10 +1,9 @@
-import { useState, useEffect, useCallback } from "react";
+import { useState, useCallback } from "react";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 
 import { assetPath } from "../utils/assetPath";
 
-import Button from "../components/Button";
 import { words } from "../constants";
 import HeroExperience from "../components/models/hero_models/HeroExperience";
 import AboutMeModal from "../components/AboutMeModal";
@@ -30,8 +29,13 @@ const Hero = () => {
       </div>
 
       <div className="hero-layout">
-        {/* LEFT: Hero Content */}
-        <header className="flex flex-col justify-center md:w-full w-screen md:px-20 px-5">
+        {/* Mobile: small 3D model in top-right corner */}
+        <div className="hero-3d-mobile">
+          <HeroExperience onAboutClick={openAbout} compact />
+        </div>
+
+        {/* Hero Content */}
+        <header className="hero-content">
           <div className="flex flex-col gap-7">
             <div className="hero-text">
               <h1>
@@ -58,23 +62,17 @@ const Hero = () => {
               <h1>Research & Insights</h1>
             </div>
 
-            <p className="text-white-50 md:text-lg text-sm tracking-wide relative z-10 pointer-events-none">
+            <p className="hero-subtitle">
               Hi, I'm Minjian &mdash; a Ph.D. Candidate in Statistics at
               the University of Missouri, passionate about bridging statistical
               theory with machine learning for biomedical and environmental
               applications.
             </p>
-
-            <Button
-              text="See My Research"
-              className="md:w-80 md:h-16 w-60 h-12"
-              id="counter"
-            />
           </div>
         </header>
 
-        {/* RIGHT: 3D Model or Visual */}
-        <figure>
+        {/* Desktop: full-size 3D model on the right */}
+        <figure className="hero-3d-desktop">
           <div className="hero-3d-layout">
             <HeroExperience onAboutClick={openAbout} />
           </div>
