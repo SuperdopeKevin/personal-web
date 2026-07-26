@@ -103,7 +103,7 @@ section {
   }
 
   .hero-3d-mobile {
-    @apply xl:hidden absolute top-0 right-0 z-20;
+    @apply xl:hidden absolute -top-4 -right-4 z-20;
   }
 
   .hero-3d-desktop {

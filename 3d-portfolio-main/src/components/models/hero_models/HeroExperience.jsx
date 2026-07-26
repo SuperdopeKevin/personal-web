@@ -16,10 +16,10 @@ const HeroExperience = ({ onAboutClick, compact }) => {
   const isMobile = useMediaQuery({ query: "(max-width: 768px)" });
   const isTablet = useMediaQuery({ query: "(max-width: 1024px)" });
 
-  const canvasHeight = compact ? '200px' : (isMobile ? '50vh' : '80vh');
+  const canvasHeight = compact ? '280px' : (isMobile ? '50vh' : '80vh');
 
   return (
-    <Canvas camera={{ position: [0, 1, 8], fov: 45 }} style={{ height: canvasHeight, width: compact ? '200px' : '100%' }}>
+    <Canvas camera={{ position: [0, 1, 8], fov: 45 }} style={{ height: canvasHeight, width: compact ? '280px' : '100%' }}>
       <ambientLight intensity={0.5} color="#ffffff" />
       <OrbitControls
         enablePan={false}
@@ -34,7 +34,7 @@ const HeroExperience = ({ onAboutClick, compact }) => {
       <Particles count={200} />
 
       <Suspense fallback={null}>
-        <RhetoricianModel isMobile={isMobile || compact} />
+        <RhetoricianModel isMobile={compact ? false : isMobile} />
       </Suspense>
     </Canvas>
   );
