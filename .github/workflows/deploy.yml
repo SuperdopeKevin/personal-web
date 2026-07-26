@@ -32,6 +32,10 @@ jobs:
 
       - name: Build
         working-directory: 3d-portfolio-main
+        env:
+          VITE_APP_EMAILJS_SERVICE_ID: service_10d4hff
+          VITE_APP_EMAILJS_TEMPLATE_ID: template_f9gr1qj
+          VITE_APP_EMAILJS_PUBLIC_KEY: wgl8NnNFlq6ZAyUIO
         run: npm run build
 
       - name: Setup Pages
