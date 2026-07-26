@@ -51,7 +51,7 @@ const AppShowcase = () => {
             </div>
             <div className="text-content">
               <h2>CIN Driver Gene Discovery — AstraZeneca</h2>
-              <p className="text-white-50 md:text-xl">
+              <p className="text-white-50 text-sm tracking-wide">
                 Built a multi-omics GWAS pipeline integrating TCGA data
                 across 926 BRCA patients to identify genetic drivers of
                 chromosomal instability (CIN). Three statistical engines

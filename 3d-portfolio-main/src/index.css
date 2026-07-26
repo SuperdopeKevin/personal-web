@@ -85,7 +85,7 @@ section {
   }
 
   .hero-text {
-    @apply flex flex-col justify-center md:text-[60px] text-[30px] font-semibold relative z-10 pointer-events-none;
+    @apply flex flex-col justify-center md:text-[48px] text-[24px] font-light tracking-wide relative z-10 pointer-events-none;
     img {
       @apply size-8 md:size-10 object-contain;
     }
@@ -118,7 +118,7 @@ section {
     }
 
     .logo {
-      @apply text-white-50 text-xl md:text-2xl font-semibold transition-transform duration-300 hover:scale-105;
+      @apply text-white-50 text-xl md:text-2xl font-light tracking-wide transition-transform duration-300 hover:scale-105;
     }
 
     nav.desktop {
@@ -197,7 +197,7 @@ section {
       }
 
       h2 {
-        @apply text-lg md:text-xl lg:text-2xl font-semibold mt-5;
+        @apply text-lg md:text-xl lg:text-2xl font-medium tracking-wide mt-5;
       }
     }
   }
@@ -266,7 +266,7 @@ section {
     @apply flex flex-col md:justify-center items-center xl:gap-5 xl:h-[50vh] overflow-hidden relative z-10 group-hover:cursor-grab;
 
     & p {
-      @apply text-lg 2xl:text-2xl pb-5 xl:pb-0 font-semibold text-white-50 text-center;
+      @apply text-lg 2xl:text-2xl pb-5 xl:pb-0 font-normal tracking-wide text-white-50 text-center;
     }
   }
 
@@ -289,7 +289,7 @@ section {
     }
 
     a {
-      @apply w-full py-4 bg-white text-black font-semibold rounded-md flex justify-center items-center gap-2;
+      @apply w-full py-4 bg-white text-black font-medium rounded-md flex justify-center items-center gap-2;
 
       img {
         @apply inline-block;
@@ -511,7 +511,7 @@ section {
 
 .modal-cv-btn {
   @apply flex items-center justify-center gap-2 w-full py-3 rounded-lg
-    bg-white text-black font-semibold hover:bg-white-50 transition-colors
+    bg-white text-black font-medium hover:bg-white-50 transition-colors
     duration-200 mb-6;
 }
 

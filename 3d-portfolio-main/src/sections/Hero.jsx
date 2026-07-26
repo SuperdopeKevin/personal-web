@@ -58,7 +58,7 @@ const Hero = () => {
               <h1>Research & Insights</h1>
             </div>
 
-            <p className="text-white-50 md:text-xl relative z-10 pointer-events-none">
+            <p className="text-white-50 md:text-lg text-sm tracking-wide relative z-10 pointer-events-none">
               Hi, I'm Minjian &mdash; a Ph.D. Candidate in Statistics at
               the University of Missouri, passionate about bridging statistical
               theory with machine learning for biomedical and environmental
