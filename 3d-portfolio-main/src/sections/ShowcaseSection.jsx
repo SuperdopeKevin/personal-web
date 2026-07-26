@@ -52,15 +52,11 @@ const AppShowcase = () => {
             <div className="text-content">
               <h2>CIN Driver Gene Discovery — AstraZeneca</h2>
               <p className="text-white-50 md:text-xl">
-                Chromosomal instability (CIN) drives tumor heterogeneity,
-                drug resistance, and poor patient outcomes in aggressive
-                cancers. At AstraZeneca, I built a multi-omics GWAS pipeline
-                integrating TCGA data across 926 BRCA patients — somatic
-                mutations, germline genotypes, gene expression, and copy-number.
-                Three independent statistical engines (MLM/FarmCPU, BayesC,
-                eRD-GWAS/TWAS) identified TP53 as the #1 CIN driver
-                (P=8.2×10⁻⁴⁵), validating the pipeline for therapeutic target
-                discovery.
+                Built a multi-omics GWAS pipeline integrating TCGA data
+                across 926 BRCA patients to identify genetic drivers of
+                chromosomal instability (CIN). Three statistical engines
+                (MLM/FarmCPU, BayesC, eRD-GWAS/TWAS) converged on TP53
+                as the top hit (P=8.2×10⁻⁴⁵).
               </p>
               <div className="flex flex-wrap gap-2 mt-4">
                 {["R (GAPIT, BGLR)", "Python", "GWAS", "TCGA", "CIN"].map((tag) => (
@@ -73,7 +69,7 @@ const AppShowcase = () => {
           </div>
 
           <div className="project-list-wrapper overflow-hidden">
-            {/* PROJECT 2: Agentic GFlowNet (small card) */}
+            {/* PROJECT 2: Agentic GFlowNet */}
             <div className="project" ref={gflownetRef}>
               <div className="image-wrapper bg-[#FFEFDB]">
                 <img
@@ -83,33 +79,22 @@ const AppShowcase = () => {
               </div>
               <h2>Agentic GFlowNet for Gene Subset Discovery</h2>
               <p className="text-white-50 text-sm mt-2">
-                Developed an end-to-end Agentic GFlowNet pipeline: an LLM-based
-                Manager decomposes discovery goals, a GFlowNet sampler proposes
-                diverse gene subsets, an R/limma backend evaluates statistical
-                significance, and a Critic provides closed-loop feedback.
-                This architecture achieves superior diversity metrics over
-                greedy selection, enabling reproducible biomarker discovery.
+                End-to-end pipeline combining GFlowNet diverse sampling,
+                LLM-guided planning, and R/limma statistical evaluation
+                for reproducible biomarker discovery.
               </p>
             </div>
 
-            {/* PROJECT 3: GFlowNet theory (small card, unchanged) */}
+            {/* PROJECT 3: GFlowNet theory */}
             <div className="project" ref={gfnTheoryRef}>
               <div className="image-wrapper bg-[#FFE7EB]">
                 <img src={assetPath("images/project3.png")} alt="Wildfire Risk Forecasting" />
               </div>
               <h2>GFlowNet for Diverse Subset Discovery</h2>
               <p className="text-white-50 text-sm mt-2">
-                Generative Flow Networks (GFlowNets) learn to sample diverse,
-                high-reward candidates from combinatorial spaces — ideal for
-                gene subset discovery where both quality and diversity matter.
-                I developed a modular Python package implementing an Agentic
-                GFlowNet architecture: an LLM-based Manager decomposes the
-                discovery goal into sub-tasks, the GFlowNet sampler proposes
-                diverse gene subsets, an R/limma backend evaluates statistical
-                significance, and a Critic provides feedback to guide the
-                search. This closed-loop system achieves superior diversity
-                metrics compared to greedy selection, enabling reproducible
-                biomarker discovery for precision medicine.
+                GFlowNets learn to sample diverse, high-reward candidates
+                from combinatorial spaces — achieving superior diversity
+                metrics over greedy selection for precision medicine.
               </p>
             </div>
           </div>
