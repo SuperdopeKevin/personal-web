@@ -9,7 +9,7 @@ import { assetPath } from "../../../utils/assetPath";
 
 const RhetoricianModel = () => {
   const { scene } = useGLTF(assetPath("models/rhetorician.glb"));
-  return <primitive object={scene} scale={1.5} position={[0, -2.5, 0]} />;
+  return <primitive object={scene} scale={0.6} position={[0, -2.5, 0]} />;
 };
 
 const HeroExperience = ({ onAboutClick }) => {
