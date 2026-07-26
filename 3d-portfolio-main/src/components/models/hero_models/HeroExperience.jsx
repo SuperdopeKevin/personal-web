@@ -7,8 +7,8 @@ import HeroLights from "./HeroLights";
 import Particles from "./Particles";
 import { assetPath } from "../../../utils/assetPath";
 
-const PhoenixModel = () => {
-  const { scene } = useGLTF(assetPath("models/phoenix_bird.glb"));
+const RhetoricianModel = () => {
+  const { scene } = useGLTF(assetPath("models/rhetorician.glb"));
   return <primitive object={scene} scale={4} position={[0, -1.5, 0]} />;
 };
 
@@ -31,7 +31,7 @@ const HeroExperience = ({ onAboutClick }) => {
       <Particles count={200} />
 
       <Suspense fallback={null}>
-        <PhoenixModel />
+        <RhetoricianModel />
       </Suspense>
     </Canvas>
   );
