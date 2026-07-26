@@ -51,7 +51,7 @@ const AppShowcase = () => {
         <div className="showcaselayout">
           <div ref={gflownetRef} className="first-project-wrapper">
             <div className="image-wrapper bg-[#0a1628]">
-              <img src={assetPath("images/project1.png")} alt="Agentic GFlowNet Gene Discovery" />
+              <img src={assetPath("images/projects/project1.png")} alt="Agentic GFlowNet Gene Discovery" />
             </div>
             <div className="text-content">
               <h2>
@@ -77,7 +77,7 @@ const AppShowcase = () => {
             <div className="project" ref={azRef}>
               <div className="image-wrapper bg-[#FFEFDB]">
                 <img
-                  src={assetPath("images/project2.png")}
+                  src={assetPath("images/projects/project2.png")}
                   alt="AstraZeneca GWAS Pipeline"
                 />
               </div>
@@ -90,7 +90,7 @@ const AppShowcase = () => {
 
             <div className="project" ref={wildfireRef}>
               <div className="image-wrapper bg-[#FFE7EB]">
-                <img src={assetPath("images/project3.png")} alt="Wildfire Risk Forecasting" />
+                <img src={assetPath("images/projects/project3.png")} alt="Wildfire Risk Forecasting" />
               </div>
               <h2>Spatio-Temporal Wildfire Risk Forecasting</h2>
               <p className="text-white-50 text-sm mt-2">

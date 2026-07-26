@@ -20,14 +20,14 @@ const navLinks = [
 ];
 
 const words = [
-  { text: "ML", imgPath: assetPath("images/ideas.svg") },
-  { text: "Statistics", imgPath: assetPath("images/concepts.svg") },
-  { text: "Bioinformatics", imgPath: assetPath("images/designs.svg") },
-  { text: "Research", imgPath: assetPath("images/code.svg") },
-  { text: "ML", imgPath: assetPath("images/ideas.svg") },
-  { text: "Statistics", imgPath: assetPath("images/concepts.svg") },
-  { text: "Bioinformatics", imgPath: assetPath("images/designs.svg") },
-  { text: "Research", imgPath: assetPath("images/code.svg") },
+  { text: "ML", imgPath: assetPath("images/words/ideas.svg") },
+  { text: "Statistics", imgPath: assetPath("images/words/concepts.svg") },
+  { text: "Bioinformatics", imgPath: assetPath("images/words/designs.svg") },
+  { text: "Research", imgPath: assetPath("images/words/code.svg") },
+  { text: "ML", imgPath: assetPath("images/words/ideas.svg") },
+  { text: "Statistics", imgPath: assetPath("images/words/concepts.svg") },
+  { text: "Bioinformatics", imgPath: assetPath("images/words/designs.svg") },
+  { text: "Research", imgPath: assetPath("images/words/code.svg") },
 ];
 
 const counterItems = [
@@ -39,26 +39,26 @@ const counterItems = [
 
 const logoIconsList = [
   {
-    imgPath: assetPath("images/logos/company-logo-1.png"),
+    imgPath: assetPath("images/branding/company-1.png"),
   },
   {
-    imgPath: assetPath("images/logos/company-logo-2.png"),
+    imgPath: assetPath("images/branding/company-2.png"),
   },
 ];
 
 const abilities = [
   {
-    imgPath: assetPath("images/seo.png"),
+    imgPath: assetPath("images/skills/seo.png"),
     title: "Statistical Rigor",
     desc: "Grounded in advanced statistical theory — GLMs, mixed models, survival analysis — with rigorous model diagnostics and validation workflows.",
   },
   {
-    imgPath: assetPath("images/chat.png"),
+    imgPath: assetPath("images/skills/chat.png"),
     title: "Reproducible Research",
     desc: "Every pipeline is version-controlled, containerized, and documented. From LaTeX reports to R Markdown notebooks, results are always traceable.",
   },
   {
-    imgPath: assetPath("images/time.png"),
+    imgPath: assetPath("images/skills/time.png"),
     title: "Scalable ML Pipelines",
     desc: "Building end-to-end machine learning systems that handle 800K+ records, from data preprocessing to model deployment and evaluation.",
   },
@@ -67,23 +67,23 @@ const abilities = [
 const techStackImgs = [
   {
     name: "Python",
-    imgPath: assetPath("images/logos/python.svg"),
+    imgPath: assetPath("images/tech/python.svg"),
   },
   {
     name: "R",
-    imgPath: assetPath("images/logos/react.png"),
+    imgPath: assetPath("images/tech/r-lang.png"),
   },
   {
     name: "PyTorch",
-    imgPath: assetPath("images/logos/three.png"),
+    imgPath: assetPath("images/tech/pytorch.png"),
   },
   {
     name: "scikit-learn",
-    imgPath: assetPath("images/logos/node.png"),
+    imgPath: assetPath("images/tech/scikit.png"),
   },
   {
     name: "Git",
-    imgPath: assetPath("images/logos/git.svg"),
+    imgPath: assetPath("images/tech/git.svg"),
   },
 ];
 
@@ -123,8 +123,8 @@ const techStackIcons = [
 const expCards = [
   {
     review: "As a Ph.D. student in Statistics at Mizzou, Minjian is developing predictive models that integrate statistical theory with modern machine learning for real-world biomedical and environmental data.",
-    imgPath: assetPath("images/exp1.png"),
-    logoPath: assetPath("images/logo1.png"),
+    imgPath: assetPath("images/experience/exp1.png"),
+    logoPath: assetPath("images/experience/logo1.png"),
     title: "Ph.D. Researcher in Statistics",
     date: "Aug 2024 — Present",
     responsibilities: [
@@ -137,8 +137,8 @@ const expCards = [
   },
   {
     review: "At AstraZeneca, Minjian built a comprehensive GWAS pipeline integrating TCGA cancer genomics data to identify genetic drivers of chromosomal instability — a key phenotype for drug response.",
-    imgPath: assetPath("images/exp2.png"),
-    logoPath: assetPath("images/logo2.png"),
+    imgPath: assetPath("images/experience/exp2.png"),
+    logoPath: assetPath("images/experience/logo2.png"),
     title: "Bioinformatics Research Intern",
     date: "AstraZeneca · Summer 2025",
     responsibilities: [
@@ -151,8 +151,8 @@ const expCards = [
   },
   {
     review: "Minjian designed and implemented an Agentic GFlowNet pipeline for diverse gene subset discovery, combining reinforcement learning with LLM-guided planning for biomarker identification.",
-    imgPath: assetPath("images/exp3.png"),
-    logoPath: assetPath("images/logo3.png"),
+    imgPath: assetPath("images/experience/exp3.png"),
+    logoPath: assetPath("images/experience/logo3.png"),
     title: "ML Research — Gene Discovery",
     date: "2025",
     responsibilities: [
@@ -167,15 +167,15 @@ const expCards = [
 const expLogos = [
   {
     name: "logo1",
-    imgPath: assetPath("images/logo1.png"),
+    imgPath: assetPath("images/experience/logo1.png"),
   },
   {
     name: "logo2",
-    imgPath: assetPath("images/logo2.png"),
+    imgPath: assetPath("images/experience/logo2.png"),
   },
   {
     name: "logo3",
-    imgPath: assetPath("images/logo3.png"),
+    imgPath: assetPath("images/experience/logo3.png"),
   },
 ];
 
@@ -184,17 +184,17 @@ const testimonials = [];
 const socialImgs = [
   {
     name: "linkedin",
-    imgPath: assetPath("images/linkedin.png"),
+    imgPath: assetPath("images/social/linkedin.svg"),
     link: "https://www.linkedin.com/in/minjian-li-457b0a322",
   },
   {
     name: "email",
-    imgPath: assetPath("images/fb.png"),
+    imgPath: assetPath("images/social/email.svg"),
     link: "mailto:ml254@umsystem.edu",
   },
   {
     name: "github",
-    imgPath: assetPath("images/x.png"),
+    imgPath: assetPath("images/social/github.svg"),
     link: "https://github.com",
   },
 ];

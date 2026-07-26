@@ -34,7 +34,7 @@ const AboutMeModal = ({ isOpen, onClose }) => {
         {/* Profile photo */}
         <div className="modal-avatar">
           <img
-            src={assetPath("images/profile.png")}
+            src={assetPath("images/profile/profile.png")}
             alt="Profile"
             className="modal-avatar-img"
           />
